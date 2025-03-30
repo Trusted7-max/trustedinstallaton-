@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Star, ArrowRight, Phone, Quote } from "lucide-react";
@@ -276,10 +275,10 @@ const Testimonials = () => {
                   Get A Quote <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <a
-                  href="tel:0737212512"
+                  href="tel:+27834628367"
                   className="inline-flex items-center justify-center px-6 py-3 bg-white text-ti-blue-900 font-medium rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
                 >
-                  <Phone className="mr-2 h-5 w-5" /> Call 073 721 2512
+                  <Phone className="mr-2 h-5 w-5" /> Call +27 83 462 8367
                 </a>
               </div>
             </div>

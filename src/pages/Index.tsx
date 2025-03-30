@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Tv, Radio, WifiIcon, CheckCircle2, ArrowRight, Phone, MapPin, Clock } from "lucide-react";
@@ -298,10 +297,10 @@ const Index = () => {
                 Get a Free Quote
               </Link>
               <a
-                href="tel:0737212512"
+                href="tel:+27834628367"
                 className="px-8 py-4 bg-ti-blue-800 text-white font-medium rounded-lg hover:bg-ti-blue-700 transition-colors border border-ti-blue-600/30 flex items-center justify-center"
               >
-                <Phone className="mr-2 h-5 w-5" /> Call 073 721 2512
+                <Phone className="mr-2 h-5 w-5" /> Call +27 83 462 8367
               </a>
             </div>
           </div>

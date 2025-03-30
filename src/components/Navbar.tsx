@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -39,7 +38,6 @@ const Navbar = () => {
     },
     { name: "How To", path: "/how-to" },
     { name: "Testimonials", path: "/testimonials" },
-    { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -121,12 +119,12 @@ const Navbar = () => {
 
           {/* Phone number display - desktop */}
           <div className="hidden md:flex items-center">
-            <a
-              href="tel:0737212512"
-              className="bg-ti-blue-600 text-white px-4 py-2 rounded-md font-medium text-sm hover:bg-ti-blue-700 transition-colors shadow-sm"
-            >
-              Call: 073 721 2512
-            </a>
+            <div className="text-sm">
+              <p className="text-gray-600">Call:</p>
+              <a href="tel:+27834628367" className="text-gray-900 font-medium">
+                +27 83 462 8367
+              </a>
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -199,12 +197,12 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            <a
-              href="tel:0737212512"
-              className="mt-4 block text-center bg-ti-blue-600 text-white px-4 py-3 rounded-md font-medium hover:bg-ti-blue-700 transition-colors"
-            >
-              Call: 073 721 2512
-            </a>
+            <div className="text-sm">
+              <p className="text-gray-600">Call:</p>
+              <a href="tel:+27834628367" className="text-gray-900 font-medium">
+                +27 83 462 8367
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Tv, Radio, Building2, Hotel, SatelliteDish, ArrowRight, Phone, CheckCircle2, Network } from "lucide-react";
@@ -420,10 +419,10 @@ const ServicesCommercial = () => {
                 Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a
-                href="tel:0737212512"
+                href="tel:+27834628367"
                 className="inline-flex items-center justify-center px-6 py-3 bg-ti-blue-700 text-white font-medium rounded-lg hover:bg-ti-blue-600 transition-colors border border-ti-blue-600/30"
               >
-                <Phone className="mr-2 h-5 w-5" /> 073 721 2512
+                <Phone className="mr-2 h-5 w-5" /> +27 83 462 8367
               </a>
             </div>
           </div>

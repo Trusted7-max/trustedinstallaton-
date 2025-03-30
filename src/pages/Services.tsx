@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Tv, Radio, WifiIcon, CheckCircle2, ArrowRight, Phone, Cable, SatelliteDish, Monitor } from "lucide-react";
@@ -238,10 +237,10 @@ const Services = () => {
             </div>
             <div className="relative z-10">
               <a 
-                href="tel:0737212512" 
+                href="tel:+27834628367" 
                 className="inline-flex items-center px-6 py-3 bg-white text-ti-blue-900 font-medium rounded-lg hover:bg-ti-blue-50 transition-colors"
               >
-                <Phone className="mr-2 h-5 w-5" /> Call 073 721 2512
+                <Phone className="mr-2 h-5 w-5" /> Call +27 83 462 8367
               </a>
             </div>
           </div>

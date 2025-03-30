@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Check } from "lucide-react";
+import { ArrowRight, Check, Phone } from "lucide-react";
 
 const HeroSection = () => {
   const [textIndex, setTextIndex] = useState(0);
@@ -29,10 +28,6 @@ const HeroSection = () => {
       <div className="container-custom relative z-10 pt-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-white space-y-6 animate-slide-up">
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-ti-blue-700/30 border border-ti-blue-500/30 text-ti-blue-200 text-sm font-medium mb-2">
-              <Check className="mr-1 h-4 w-4" /> Approved DStv Installers
-            </div>
-            
             <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-white leading-tight">
               South Africa's Premier 
               <div className="h-16 sm:h-24 overflow-hidden mt-2">
@@ -53,49 +48,16 @@ const HeroSection = () => {
               </div>
             </h1>
             
-            <p className="text-lg text-ti-blue-100 max-w-xl">
+            <p className="text-lg text-ti-blue-100 max-w-xl mb-12">
               Professional DStv installations, decoder repairs, and TV mounting services across major provinces in South Africa.
             </p>
-            
-            <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
-              <Link 
-                to="/contact" 
-                className="bg-ti-blue-500 hover:bg-ti-blue-600 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center"
-              >
-                Get A Quote <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link 
-                to="/services" 
-                className="bg-white/10 hover:bg-white/20 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 backdrop-blur-sm border border-white/10 flex items-center justify-center"
-              >
-                Our Services
-              </Link>
-            </div>
-            
-            <div className="flex items-center space-x-4 pt-6">
-              <div className="flex -space-x-2">
-                <div className="w-10 h-10 rounded-full bg-ti-blue-600 flex items-center justify-center text-white text-sm border-2 border-ti-blue-950">
-                  <Check className="h-5 w-5" />
-                </div>
-                <div className="w-10 h-10 rounded-full bg-ti-blue-600 flex items-center justify-center text-white text-sm border-2 border-ti-blue-950">
-                  <Check className="h-5 w-5" />
-                </div>
-                <div className="w-10 h-10 rounded-full bg-ti-blue-600 flex items-center justify-center text-white text-sm border-2 border-ti-blue-950">
-                  <Check className="h-5 w-5" />
-                </div>
-              </div>
-              <div className="text-sm text-ti-blue-100">
-                <p>Trusted by 1000+ customers</p>
-                <p className="text-xs text-ti-blue-300">Fast response and quality service</p>
-              </div>
-            </div>
           </div>
           
           <div className="relative hidden lg:block animate-slide-in-right">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-ti-blue-600 to-ti-blue-400 rounded-2xl blur-xl opacity-30 animate-pulse"></div>
             <div className="relative glass-dark p-4 rounded-2xl overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1597506893613-5c0c3b4d8891?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" 
+                src="/dstv picture.jpg" 
                 alt="DStv Installation" 
                 className="w-full h-auto rounded-xl"
               />
@@ -108,8 +70,8 @@ const HeroSection = () => {
                     <div>
                       <h3 className="text-white font-medium">24/7 Support</h3>
                       <p className="text-gray-300 text-sm">Call now for quick service</p>
-                      <a href="tel:0737212512" className="text-ti-blue-300 hover:text-ti-blue-200 font-medium">
-                        073 721 2512
+                      <a href="tel:+27834628367" className="text-ti-blue-300 hover:text-ti-blue-200 font-medium">
+                        +27 83 462 8367
                       </a>
                     </div>
                   </div>
@@ -131,8 +93,5 @@ const HeroSection = () => {
     </div>
   );
 };
-
-// Missing import for Phone icon
-import { Phone } from "lucide-react";
 
 export default HeroSection;

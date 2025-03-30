@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, ArrowRight } from "lucide-react";
@@ -63,12 +62,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-gray-300 hover:text-white transition-colors flex items-center">
-                  <ArrowRight className="h-4 w-4 mr-2 text-ti-blue-400" />
-                  Blog
-                </Link>
-              </li>
-              <li>
                 <Link to="/contact" className="text-gray-300 hover:text-white transition-colors flex items-center">
                   <ArrowRight className="h-4 w-4 mr-2 text-ti-blue-400" />
                   Contact
@@ -119,11 +112,10 @@ const Footer = () => {
             <h3 className="font-display font-bold text-lg mb-6 border-b border-ti-blue-800 pb-2">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-start">
-                <Phone className="h-5 w-5 mr-3 text-ti-blue-400 mt-0.5" />
-                <div>
-                  <p className="text-sm text-gray-400">Phone</p>
-                  <a href="tel:0737212512" className="text-white hover:text-ti-blue-300 transition-colors">
-                    073 721 2512
+                <div className="flex items-center space-x-2">
+                  <Phone className="h-4 w-4 text-ti-blue-300" />
+                  <a href="tel:+27834628367" className="hover:text-ti-blue-300">
+                    +27 83 462 8367
                   </a>
                 </div>
               </li>

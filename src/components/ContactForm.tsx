@@ -1,27 +1,20 @@
-
 import React, { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
+import { cn } from "@/lib/utils";
+import { useForm } from "react-hook-form";
+import type { FieldValues } from "react-hook-form";
 
 const ContactForm = () => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    service: "",
-    message: "",
-  });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset
+  } = useForm();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const onSubmit = async (data: FieldValues) => {
     setIsSubmitting(true);
 
     // Simulate API call
@@ -31,19 +24,13 @@ const ContactForm = () => {
         description: "Thank you for contacting us. We'll get back to you shortly!",
         duration: 5000,
       });
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        message: "",
-      });
+      reset();
       setIsSubmitting(false);
     }, 1000);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -51,14 +38,14 @@ const ContactForm = () => {
           </label>
           <input
             id="name"
-            name="name"
+            {...register("name", { required: true })}
             type="text"
-            value={formData.name}
-            onChange={handleChange}
-            required
             className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-ti-blue-500 focus:border-transparent transition-colors"
             placeholder="John Doe"
           />
+          {errors.name && (
+            <span className="text-red-500 text-sm">This field is required</span>
+          )}
         </div>
 
         <div>
@@ -67,14 +54,19 @@ const ContactForm = () => {
           </label>
           <input
             id="email"
-            name="email"
+            {...register("email", { 
+              required: true,
+              pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i 
+            })}
             type="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
             className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-ti-blue-500 focus:border-transparent transition-colors"
             placeholder="john@example.com"
           />
+          {errors.email && (
+            <span className="text-red-500 text-sm">
+              {errors.email.type === "required" ? "This field is required" : "Invalid email address"}
+            </span>
+          )}
         </div>
       </div>
 
@@ -85,14 +77,17 @@ const ContactForm = () => {
           </label>
           <input
             id="phone"
-            name="phone"
+            {...register("phone", { required: true })}
             type="tel"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-            className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-ti-blue-500 focus:border-transparent transition-colors"
-            placeholder="073 721 2512"
+            className={cn(
+              "w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-ti-blue-500 focus:border-transparent transition-colors",
+              errors.phone && "border-red-500 focus:ring-red-500"
+            )}
+            placeholder="+27 83 462 8367"
           />
+          {errors.phone && (
+            <span className="text-red-500 text-sm">This field is required</span>
+          )}
         </div>
 
         <div>
@@ -101,10 +96,7 @@ const ContactForm = () => {
           </label>
           <select
             id="service"
-            name="service"
-            value={formData.service}
-            onChange={handleChange}
-            required
+            {...register("service", { required: true })}
             className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-ti-blue-500 focus:border-transparent transition-colors"
           >
             <option value="">Select a service</option>
@@ -116,6 +108,9 @@ const ContactForm = () => {
             <option value="commercial">Commercial Installation</option>
             <option value="other">Other</option>
           </select>
+          {errors.service && (
+            <span className="text-red-500 text-sm">Please select a service</span>
+          )}
         </div>
       </div>
 
@@ -125,14 +120,14 @@ const ContactForm = () => {
         </label>
         <textarea
           id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          required
+          {...register("message", { required: true })}
           rows={5}
           className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-ti-blue-500 focus:border-transparent transition-colors"
           placeholder="Tell us about your needs..."
         ></textarea>
+        {errors.message && (
+          <span className="text-red-500 text-sm">This field is required</span>
+        )}
       </div>
 
       <button
