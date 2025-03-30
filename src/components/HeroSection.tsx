@@ -27,30 +27,34 @@ const HeroSection = () => {
       {/* Main content */}
       <div className="container-custom relative z-10 pt-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="text-white space-y-6 animate-slide-up">
-            <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-white leading-tight">
-              South Africa's Premier 
-              <div className="h-16 sm:h-24 overflow-hidden mt-2">
-                <div className="relative h-full">
-                  {rotatingTexts.map((text, index) => (
-                    <div 
-                      key={index}
-                      className={`absolute transition-all duration-700 ease-in-out w-full text-ti-blue-200 ${
-                        index === textIndex 
-                          ? "opacity-100 translate-y-0" 
-                          : "opacity-0 translate-y-full"
-                      }`}
-                    >
-                      {text}
-                    </div>
-                  ))}
+          <div className="text-white animate-slide-up">
+            <div className="space-y-12">
+              <div className="space-y-4">
+                <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-white leading-tight">
+                  South Africa's Premier 
+                </h1>
+                <div className="h-20 sm:h-28 overflow-hidden">
+                  <div className="relative h-full">
+                    {rotatingTexts.map((text, index) => (
+                      <div 
+                        key={index}
+                        className={`absolute transition-all duration-700 ease-in-out w-full text-ti-blue-200 text-4xl sm:text-5xl md:text-6xl font-bold ${
+                          index === textIndex 
+                            ? "opacity-100 translate-y-0" 
+                            : "opacity-0 translate-y-full"
+                        }`}
+                      >
+                        {text}
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </h1>
-            
-            <p className="text-lg text-ti-blue-100 max-w-xl mb-12">
-              Professional DStv installations, decoder repairs, and TV mounting services across major provinces in South Africa.
-            </p>
+              
+              <p className="text-lg text-ti-blue-100 max-w-xl">
+                Professional DStv installations, decoder repairs, and TV mounting services across major provinces in South Africa.
+              </p>
+            </div>
           </div>
           
           <div className="relative hidden lg:block animate-slide-in-right">
