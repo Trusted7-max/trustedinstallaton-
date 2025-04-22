@@ -61,7 +61,7 @@ const HeroSection = () => {
             <div className="absolute -inset-0.5 bg-gradient-to-r from-ti-blue-600 to-ti-blue-400 rounded-2xl blur-xl opacity-30 animate-pulse"></div>
             <div className="relative glass-dark p-2 sm:p-4 rounded-2xl overflow-hidden">
               <img 
-                src="/DSTV PIC 2.jpg" 
+                src="/dstv-picture.jpg" 
                 alt="DStv Installation" 
                 className="w-full h-auto rounded-xl"
               />
