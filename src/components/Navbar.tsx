@@ -121,8 +121,8 @@ const Navbar = () => {
           <div className="hidden md:flex items-center">
             <div className="text-sm">
               <p className="text-gray-600">Call:</p>
-              <a href="tel:+27834628367" className="text-gray-900 font-medium">
-                +27 83 462 8367
+              <a href="tel:+27737112089" className="text-gray-900 font-medium">
+                +27737112089
               </a>
             </div>
           </div>
@@ -199,8 +199,8 @@ const Navbar = () => {
             ))}
             <div className="text-sm">
               <p className="text-gray-600">Call:</p>
-              <a href="tel:+27834628367" className="text-gray-900 font-medium">
-                +27 83 462 8367
+              <a href="tel:+27737112089" className="text-gray-900 font-medium">
+              +27737112089
               </a>
             </div>
           </div>

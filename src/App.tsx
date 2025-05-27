@@ -44,7 +44,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
-        <WhatsAppButton phoneNumber="+27834628367" />
+        <WhatsAppButton phoneNumber="+27737112089" />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

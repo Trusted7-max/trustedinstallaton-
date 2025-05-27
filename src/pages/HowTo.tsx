@@ -394,10 +394,10 @@ const HowTo = () => {
                 Contact Us <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a
-                href="tel:+27834628367"
+                href="tel:+27737112089"
                 className="inline-flex items-center justify-center px-6 py-3 bg-ti-blue-700 text-white font-medium rounded-lg hover:bg-ti-blue-600 transition-colors border border-ti-blue-600/30"
               >
-                <Phone className="mr-2 h-5 w-5" /> +27 83 462 8367
+                <Phone className="mr-2 h-5 w-5" /> +27737112089
               </a>
             </div>
           </div>

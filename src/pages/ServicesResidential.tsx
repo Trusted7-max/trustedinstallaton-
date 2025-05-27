@@ -334,7 +334,7 @@ const ServicesResidential = () => {
                       href="tel:+27834628367"
                       className="inline-flex items-center px-6 py-3 bg-white text-ti-blue-900 font-medium rounded-lg border border-ti-blue-200 hover:bg-gray-50 transition-colors"
                     >
-                      <Phone className="mr-2 h-5 w-5" /> Call +27 83 462 8367
+                      <Phone className="mr-2 h-5 w-5" /> Call +27737112089
                     </a>
                   </div>
                 </div>

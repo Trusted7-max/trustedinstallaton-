@@ -83,7 +83,7 @@ const ContactForm = () => {
               "w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-ti-blue-500 focus:border-transparent transition-colors",
               errors.phone && "border-red-500 focus:ring-red-500"
             )}
-            placeholder="+27 83 462 8367"
+            placeholder="+27737112089"
           />
           {errors.phone && (
             <span className="text-red-500 text-sm">This field is required</span>
