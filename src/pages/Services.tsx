@@ -157,10 +157,10 @@ const Services = () => {
                 <span>Certified Professionals</span>
               </div>
               <h2 className="text-4xl font-display font-bold mb-6 text-gray-900">
-                Why Choose Trusted Installations?
+                Why Choose Trusted Dstv Installers?
               </h2>
               <p className="text-lg text-gray-600">
-                Trusted Installations boasts the best DStv installers in the industry. Our technicians are continuously trained and always up to date with the latest Multichoice technologies.
+                Trusted Dstv Installers boasts the best DStv installers in the industry. Our technicians are continuously trained and always up to date with the latest Multichoice technologies.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">

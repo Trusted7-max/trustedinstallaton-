@@ -30,14 +30,14 @@ const Testimonials = () => {
       name: "Michelle van der Merwe",
       location: "Pretoria",
       rating: 5,
-      text: "I had my entire entertainment system set up by Trusted Installations, including TV mounting and DStv. The result is amazing, and their attention to detail is impressive. Highly recommend!",
+      text: "I had my entire entertainment system set up by Trusted Dstv Installers, including TV mounting and DStv. The result is amazing, and their attention to detail is impressive. Highly recommend!",
       date: "2 months ago",
     },
     {
       name: "Thomas Banda",
       location: "Bloemfontein",
       rating: 5,
-      text: "After struggling with poor signal for months, I finally called Trusted Installations. They identified and fixed the issue in under an hour. Should have called them sooner!",
+      text: "After struggling with poor signal for months, I finally called Trusted Dstv Installers. They identified and fixed the issue in under an hour. Should have called them sooner!",
       date: "1 month ago",
     },
     {
@@ -58,7 +58,7 @@ const Testimonials = () => {
       name: "Linda Naidoo",
       location: "Durban",
       rating: 5,
-      text: "I've used Trusted Installations three times now for different properties, and they never disappoint. Consistent quality service and excellent after-sales support.",
+      text: "I've used Trusted Dstv Installers three times now for different properties, and they never disappoint. Consistent quality service and excellent after-sales support.",
       date: "2 months ago",
     },
     {
@@ -139,7 +139,7 @@ const Testimonials = () => {
               </div>
               <div className="md:w-3/5 p-8">
                 <p className="text-xl text-gray-600 italic mb-6">
-                  "We recently moved to a new home and needed a complete DStv installation. Trusted Installations was recommended by a friend, and they exceeded our expectations! The technician arrived on time, discussed all options with us, and completed the installation quickly and professionally. We now have perfect reception in multiple rooms, and the TV mounting looks fantastic. We couldn't be happier with the service."
+                  "We recently moved to a new home and needed a complete DStv installation. Trusted Dstv Installers was recommended by a friend, and they exceeded our expectations! The technician arrived on time, discussed all options with us, and completed the installation quickly and professionally. We now have perfect reception in multiple rooms, and the TV mounting looks fantastic. We couldn't be happier with the service."
                 </p>
                 <p className="text-gray-500">
                   Services: DStv Installation, Multi-room Setup, TV Mounting

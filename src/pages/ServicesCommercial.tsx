@@ -44,7 +44,7 @@ const ServicesCommercial = () => {
                 Enhance Your Business with Professional DStv Solutions
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Trusted Installations provides tailored DStv solutions for businesses of all sizes. Our commercial services are designed to enhance customer experience, provide entertainment options, and create a professional atmosphere.
+                Trusted Dstv Installers provides tailored DStv solutions for businesses of all sizes. Our commercial services are designed to enhance customer experience, provide entertainment options, and create a professional atmosphere.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

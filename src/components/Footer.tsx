@@ -15,7 +15,7 @@ const Footer = () => {
               <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-ti-blue-600 font-bold">
                 TI
               </div>
-              <span className="font-display font-bold text-xl">Trusted Installations</span>
+              <span className="font-display font-bold text-xl">Trusted Dstv Installers</span>
             </Link>
             <p className="text-gray-300 text-sm">
               We are South Africa's leading DStv installation company, providing professional and reliable services across major provinces.
@@ -144,7 +144,7 @@ const Footer = () => {
         <div className="border-t border-ti-blue-800 mt-12 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              &copy; {currentYear} Trusted Installations. All rights reserved.
+              &copy; {currentYear} Trusted Dstv Installers. All rights reserved.
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white text-sm">

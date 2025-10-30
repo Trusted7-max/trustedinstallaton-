@@ -58,7 +58,7 @@ const Navbar = () => {
             <div className="w-10 h-10 rounded-full bg-ti-blue-600 flex items-center justify-center text-white">
               TI
             </div>
-            <span className="hidden sm:inline-block">Trusted Installations</span>
+            <span className="hidden sm:inline-block">Trusted Dstv Installers</span>
           </Link>
 
           {/* Desktop Navigation */}
