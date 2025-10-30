@@ -103,10 +103,10 @@ const Index = () => {
                 <span>Why Choose Us</span>
               </div>
               <h2 className="text-4xl font-display font-bold mb-6 text-gray-900">
-                Trusted Installations: Your Premier DStv Solution
+                Trusted Dstv Installers: Your Premier DStv Solution
               </h2>
               <p className="text-lg text-gray-600">
-                Trusted Installations is the number one solution for all your recommended DStv installations across major provinces of South Africa. We have approved DStv installers who can help you with professional decoder repairs and installations.
+                Trusted Dstv Installers is the number one solution for all your recommended DStv installations across major provinces of South Africa. We have approved DStv installers who can help you with professional decoder repairs and installations.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
@@ -287,7 +287,7 @@ const Index = () => {
               Ready for Crystal Clear Entertainment?
             </h2>
             <p className="text-xl text-ti-blue-100 mb-10 max-w-2xl mx-auto">
-              Contact Trusted Installations today for professional DStv installation services and enjoy an uninterrupted viewing experience.
+              Contact Trusted Dstv Installers today for professional DStv installation services and enjoy an uninterrupted viewing experience.
             </p>
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
               <Link
