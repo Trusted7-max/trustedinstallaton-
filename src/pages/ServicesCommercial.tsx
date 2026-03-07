@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Tv, Radio, Building2, Hotel, SatelliteDish, ArrowRight, Phone, CheckCircle2, Network } from "lucide-react";
+import { PHONE_NUMBER, PHONE_NUMBER_RAW } from "@/lib/constants";
 
 const ServicesCommercial = () => {
   return (
@@ -21,7 +22,7 @@ const ServicesCommercial = () => {
             </p>
           </div>
         </div>
-        
+
         {/* Wave shape divider */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-16">
@@ -57,7 +58,7 @@ const ServicesCommercial = () => {
                     Tailored DStv setups designed for your specific business needs and space.
                   </p>
                 </div>
-                
+
                 <div className="bg-white p-6 rounded-xl shadow-md">
                   <div className="p-3 bg-ti-blue-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                     <Tv className="h-6 w-6 text-ti-blue-600" />
@@ -67,7 +68,7 @@ const ServicesCommercial = () => {
                     Connect multiple TVs to one system with independent channel control.
                   </p>
                 </div>
-                
+
                 <div className="bg-white p-6 rounded-xl shadow-md">
                   <div className="p-3 bg-ti-blue-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                     <Network className="h-6 w-6 text-ti-blue-600" />
@@ -77,7 +78,7 @@ const ServicesCommercial = () => {
                     Signal distribution solutions that maintain HD/UHD quality across all screens.
                   </p>
                 </div>
-                
+
                 <div className="bg-white p-6 rounded-xl shadow-md">
                   <div className="p-3 bg-ti-blue-100 rounded-full w-12 h-12 flex items-center justify-center mb-4">
                     <SatelliteDish className="h-6 w-6 text-ti-blue-600" />
@@ -89,13 +90,13 @@ const ServicesCommercial = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="order-1 lg:order-2 relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-ti-blue-600/20 to-ti-blue-400/20 rounded-2xl blur-xl"></div>
               <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80" 
-                  alt="Commercial DStv Installation" 
+                <img
+                  src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80"
+                  alt="Commercial DStv Installation"
                   className="rounded-xl shadow-lg"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg">
@@ -419,10 +420,10 @@ const ServicesCommercial = () => {
                 Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a
-                href="tel:+27737112089"
+                href={`tel:${PHONE_NUMBER_RAW}`}
                 className="inline-flex items-center justify-center px-6 py-3 bg-ti-blue-700 text-white font-medium rounded-lg hover:bg-ti-blue-600 transition-colors border border-ti-blue-600/30"
               >
-                <Phone className="mr-2 h-5 w-5" /> +27737112089
+                <Phone className="mr-2 h-5 w-5" /> {PHONE_NUMBER}
               </a>
             </div>
           </div>

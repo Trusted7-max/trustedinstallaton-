@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
+import { PHONE_NUMBER, PHONE_NUMBER_RAW } from "../lib/constants";
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -43,11 +45,10 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${isScrolled
           ? "bg-white/80 backdrop-blur-md shadow-md py-3"
           : "bg-transparent py-5"
-      }`}
+        }`}
     >
       <div className="container-custom">
         <div className="flex items-center justify-between">
@@ -69,31 +70,28 @@ const Navbar = () => {
                   <div className="relative">
                     <button
                       onClick={() => setIsServicesOpen(!isServicesOpen)}
-                      className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                        location.pathname === item.path ||
-                        location.pathname.startsWith(`${item.path}/`)
+                      className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${location.pathname === item.path ||
+                          location.pathname.startsWith(`${item.path}/`)
                           ? "text-ti-blue-600"
                           : "text-gray-700 hover:text-ti-blue-600 hover:bg-gray-100"
-                      }`}
+                        }`}
                     >
                       {item.name}
                       <ChevronDown className="ml-1 h-4 w-4" />
                     </button>
                     <div
-                      className={`absolute top-full left-0 w-48 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-300 origin-top ${
-                        isServicesOpen ? "block" : "hidden"
-                      }`}
+                      className={`absolute top-full left-0 w-48 bg-white shadow-lg rounded-md overflow-hidden transition-all duration-300 origin-top ${isServicesOpen ? "block" : "hidden"
+                        }`}
                     >
                       <div className="py-1">
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
                             to={dropdownItem.path}
-                            className={`block px-4 py-2 text-sm ${
-                              location.pathname === dropdownItem.path
+                            className={`block px-4 py-2 text-sm ${location.pathname === dropdownItem.path
                                 ? "bg-ti-blue-50 text-ti-blue-600"
                                 : "text-gray-700 hover:bg-gray-100 hover:text-ti-blue-600"
-                            }`}
+                              }`}
                           >
                             {dropdownItem.name}
                           </Link>
@@ -104,11 +102,10 @@ const Navbar = () => {
                 ) : (
                   <Link
                     to={item.path}
-                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                      location.pathname === item.path
+                    className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${location.pathname === item.path
                         ? "text-ti-blue-600"
                         : "text-gray-700 hover:text-ti-blue-600 hover:bg-gray-100"
-                    }`}
+                      }`}
                   >
                     {item.name}
                   </Link>
@@ -121,11 +118,12 @@ const Navbar = () => {
           <div className="hidden md:flex items-center">
             <div className="text-sm">
               <p className="text-gray-600">Call:</p>
-              <a href="tel:+27737112089" className="text-gray-900 font-medium">
-                +27737112089
+              <a href={`tel:${PHONE_NUMBER_RAW}`} className="text-gray-900 font-medium">
+                {PHONE_NUMBER}
               </a>
             </div>
           </div>
+
 
           {/* Mobile menu button */}
           <button
@@ -142,9 +140,8 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-            isMenuOpen ? "max-h-[400px] my-4" : "max-h-0"
-          }`}
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? "max-h-[400px] my-4" : "max-h-0"
+            }`}
         >
           <div className="flex flex-col space-y-2 pt-2 pb-3">
             {navItems.map((item) => (
@@ -153,30 +150,27 @@ const Navbar = () => {
                   <div className="space-y-2">
                     <button
                       onClick={() => setIsServicesOpen(!isServicesOpen)}
-                      className={`flex items-center justify-between w-full px-4 py-2 text-base font-medium rounded-md ${
-                        location.pathname === item.path ||
-                        location.pathname.startsWith(`${item.path}/`)
+                      className={`flex items-center justify-between w-full px-4 py-2 text-base font-medium rounded-md ${location.pathname === item.path ||
+                          location.pathname.startsWith(`${item.path}/`)
                           ? "bg-ti-blue-50 text-ti-blue-600"
                           : "text-gray-700"
-                      }`}
+                        }`}
                     >
                       {item.name}
                       <ChevronDown className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
                     </button>
                     <div
-                      className={`transition-all duration-300 overflow-hidden ${
-                        isServicesOpen ? "max-h-48" : "max-h-0"
-                      }`}
+                      className={`transition-all duration-300 overflow-hidden ${isServicesOpen ? "max-h-48" : "max-h-0"
+                        }`}
                     >
                       {item.dropdown.map((dropdownItem) => (
                         <Link
                           key={dropdownItem.name}
                           to={dropdownItem.path}
-                          className={`block pl-8 pr-4 py-2 text-sm rounded-md ${
-                            location.pathname === dropdownItem.path
+                          className={`block pl-8 pr-4 py-2 text-sm rounded-md ${location.pathname === dropdownItem.path
                               ? "bg-ti-blue-50 text-ti-blue-600"
                               : "text-gray-700 hover:bg-gray-50"
-                          }`}
+                            }`}
                         >
                           {dropdownItem.name}
                         </Link>
@@ -186,11 +180,10 @@ const Navbar = () => {
                 ) : (
                   <Link
                     to={item.path}
-                    className={`block px-4 py-2 text-base font-medium rounded-md ${
-                      location.pathname === item.path
+                    className={`block px-4 py-2 text-base font-medium rounded-md ${location.pathname === item.path
                         ? "bg-ti-blue-50 text-ti-blue-600"
                         : "text-gray-700 hover:bg-gray-50"
-                    }`}
+                      }`}
                   >
                     {item.name}
                   </Link>
@@ -199,10 +192,11 @@ const Navbar = () => {
             ))}
             <div className="text-sm">
               <p className="text-gray-600">Call:</p>
-              <a href="tel:+27737112089" className="text-gray-900 font-medium">
-              +27737112089
+              <a href={`tel:${PHONE_NUMBER_RAW}`} className="text-gray-900 font-medium">
+                {PHONE_NUMBER}
               </a>
             </div>
+
           </div>
         </div>
       </div>

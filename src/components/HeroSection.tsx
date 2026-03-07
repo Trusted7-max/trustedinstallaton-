@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Check, Phone } from "lucide-react";
+import { PHONE_NUMBER, PHONE_NUMBER_RAW } from "../lib/constants";
+
 
 const HeroSection = () => {
   const [textIndex, setTextIndex] = useState(0);
@@ -23,7 +25,7 @@ const HeroSection = () => {
     <div className="relative min-h-screen flex items-center bg-gradient-to-br from-ti-blue-950 to-ti-blue-800 overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 bg-hero-pattern opacity-10"></div>
-      
+
       {/* Main content */}
       <div className="container-custom relative z-10 pt-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -31,18 +33,17 @@ const HeroSection = () => {
             <div className="space-y-8 lg:space-y-12">
               <div className="space-y-4">
                 <h1 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
-                  South Africa's Premier 
+                  South Africa's Premier
                 </h1>
                 <div className="h-16 sm:h-20 md:h-24 lg:h-28 overflow-hidden">
                   <div className="relative h-full">
                     {rotatingTexts.map((text, index) => (
-                      <div 
+                      <div
                         key={index}
-                        className={`absolute transition-all duration-700 ease-in-out w-full text-ti-blue-200 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ${
-                          index === textIndex 
-                            ? "opacity-100 translate-y-0" 
+                        className={`absolute transition-all duration-700 ease-in-out w-full text-ti-blue-200 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold ${index === textIndex
+                            ? "opacity-100 translate-y-0"
                             : "opacity-0 translate-y-full"
-                        }`}
+                          }`}
                       >
                         {text}
                       </div>
@@ -50,19 +51,19 @@ const HeroSection = () => {
                   </div>
                 </div>
               </div>
-              
+
               <p className="text-base sm:text-lg text-ti-blue-100 max-w-xl">
                 Professional DStv installations, decoder repairs, and TV mounting services across major provinces in South Africa.
               </p>
             </div>
           </div>
-          
+
           <div className="relative block animate-slide-in-right mt-8 lg:mt-0">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-ti-blue-600 to-ti-blue-400 rounded-2xl blur-xl opacity-30 animate-pulse"></div>
             <div className="relative glass-dark p-2 sm:p-4 rounded-2xl overflow-hidden">
-              <img 
-                src="/dstv-picture.jpg" 
-                alt="DStv Installation" 
+              <img
+                src="/dstv-picture.jpg"
+                alt="DStv Installation"
                 className="w-full h-auto rounded-xl"
               />
               <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 right-4 sm:right-8">
@@ -74,9 +75,10 @@ const HeroSection = () => {
                     <div>
                       <h3 className="text-white font-medium text-sm sm:text-base">24/7 Support</h3>
                       <p className="text-gray-300 text-xs sm:text-sm">Call now for quick service</p>
-                      <a href="tel:+27834628367" className="text-ti-blue-300 hover:text-ti-blue-200 font-medium text-sm sm:text-base">
-                        +27 83 462 8367
+                      <a href={`tel:${PHONE_NUMBER_RAW}`} className="text-ti-blue-300 hover:text-ti-blue-200 font-medium text-sm sm:text-base">
+                        {PHONE_NUMBER}
                       </a>
+
                     </div>
                   </div>
                 </div>
@@ -85,7 +87,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Wave shape divider */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-16 sm:h-24">

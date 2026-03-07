@@ -3,6 +3,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { cn } from "@/lib/utils";
 import { useForm } from "react-hook-form";
 import type { FieldValues } from "react-hook-form";
+import { PHONE_NUMBER_RAW } from "@/lib/constants";
 
 const ContactForm = () => {
   const { toast } = useToast();
@@ -54,9 +55,9 @@ const ContactForm = () => {
           </label>
           <input
             id="email"
-            {...register("email", { 
+            {...register("email", {
               required: true,
-              pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i 
+              pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
             })}
             type="email"
             className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-ti-blue-500 focus:border-transparent transition-colors"
@@ -83,7 +84,7 @@ const ContactForm = () => {
               "w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-ti-blue-500 focus:border-transparent transition-colors",
               errors.phone && "border-red-500 focus:ring-red-500"
             )}
-            placeholder="+27737112089"
+            placeholder={PHONE_NUMBER_RAW}
           />
           {errors.phone && (
             <span className="text-red-500 text-sm">This field is required</span>
@@ -133,9 +134,8 @@ const ContactForm = () => {
       <button
         type="submit"
         disabled={isSubmitting}
-        className={`w-full bg-ti-blue-600 text-white font-medium px-6 py-3 rounded-lg transition-colors ${
-          isSubmitting ? "opacity-70 cursor-not-allowed" : "hover:bg-ti-blue-700"
-        }`}
+        className={`w-full bg-ti-blue-600 text-white font-medium px-6 py-3 rounded-lg transition-colors ${isSubmitting ? "opacity-70 cursor-not-allowed" : "hover:bg-ti-blue-700"
+          }`}
       >
         {isSubmitting ? "Sending..." : "Send Message"}
       </button>

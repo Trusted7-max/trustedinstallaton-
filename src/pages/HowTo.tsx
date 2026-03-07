@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, HelpCircle, AlertTriangle, Wrench, Settings2, CheckCircle2, Phone } from "lucide-react";
+import { PHONE_NUMBER, PHONE_NUMBER_RAW } from "@/lib/constants";
 
 const HowTo = () => {
   return (
@@ -21,7 +22,7 @@ const HowTo = () => {
             </p>
           </div>
         </div>
-        
+
         {/* Wave shape divider */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-16">
@@ -394,10 +395,10 @@ const HowTo = () => {
                 Contact Us <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a
-                href="tel:+27737112089"
+                href={`tel:${PHONE_NUMBER_RAW}`}
                 className="inline-flex items-center justify-center px-6 py-3 bg-ti-blue-700 text-white font-medium rounded-lg hover:bg-ti-blue-600 transition-colors border border-ti-blue-600/30"
               >
-                <Phone className="mr-2 h-5 w-5" /> +27737112089
+                <Phone className="mr-2 h-5 w-5" /> {PHONE_NUMBER}
               </a>
             </div>
           </div>
