@@ -15,6 +15,8 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
+import { PHONE_NUMBER_RAW } from "./lib/constants";
+
 
 const queryClient = new QueryClient();
 
@@ -44,8 +46,9 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
-        <WhatsAppButton phoneNumber="+27737112089" />
+        <WhatsAppButton phoneNumber={PHONE_NUMBER_RAW} />
       </BrowserRouter>
+
     </TooltipProvider>
   </QueryClientProvider>
 );

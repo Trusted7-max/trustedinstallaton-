@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Tv, Radio, Monitor, SatelliteDish, Wrench, Speaker, Cable, ArrowRight, Phone, CheckCircle2 } from "lucide-react";
+import { PHONE_NUMBER, PHONE_NUMBER_RAW } from "@/lib/constants";
 
 const ServicesResidential = () => {
   return (
@@ -21,7 +22,7 @@ const ServicesResidential = () => {
             </p>
           </div>
         </div>
-        
+
         {/* Wave shape divider */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-16">
@@ -37,7 +38,7 @@ const ServicesResidential = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="section-title mb-10">Our Residential Services</h2>
-            
+
             <div className="space-y-10">
               {/* Service 1 */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
@@ -331,10 +332,10 @@ const ServicesResidential = () => {
                       Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                     <a
-                      href="tel:+27834628367"
+                      href={`tel:${PHONE_NUMBER_RAW}`}
                       className="inline-flex items-center px-6 py-3 bg-white text-ti-blue-900 font-medium rounded-lg border border-ti-blue-200 hover:bg-gray-50 transition-colors"
                     >
-                      <Phone className="mr-2 h-5 w-5" /> Call +27737112089
+                      <Phone className="mr-2 h-5 w-5" /> Call {PHONE_NUMBER}
                     </a>
                   </div>
                 </div>

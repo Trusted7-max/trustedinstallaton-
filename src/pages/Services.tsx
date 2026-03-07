@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Tv, Radio, WifiIcon, CheckCircle2, ArrowRight, Phone, Cable, SatelliteDish, Monitor } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
+import { PHONE_NUMBER, PHONE_NUMBER_RAW } from "@/lib/constants";
 
 const Services = () => {
   const residentialServices = [
@@ -73,7 +74,7 @@ const Services = () => {
             </p>
           </div>
         </div>
-        
+
         {/* Wave shape divider */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-16">
@@ -215,9 +216,9 @@ const Services = () => {
             <div className="order-1 lg:order-2 relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-ti-blue-600/20 to-ti-blue-400/20 rounded-2xl blur-xl"></div>
               <div className="relative rounded-xl overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" 
-                  alt="DStv Technician" 
+                <img
+                  src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                  alt="DStv Technician"
                   className="w-full h-auto rounded-xl"
                 />
               </div>
@@ -236,11 +237,11 @@ const Services = () => {
               <p className="text-ti-blue-100">Contact us today for professional service.</p>
             </div>
             <div className="relative z-10">
-              <a 
-                href="tel:+27834628367" 
+              <a
+                href={`tel:${PHONE_NUMBER_RAW}`}
                 className="inline-flex items-center px-6 py-3 bg-white text-ti-blue-900 font-medium rounded-lg hover:bg-ti-blue-50 transition-colors"
               >
-                <Phone className="mr-2 h-5 w-5" /> Call +27 83 462 8367
+                <Phone className="mr-2 h-5 w-5" /> Call {PHONE_NUMBER}
               </a>
             </div>
           </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import { Phone, Mail, MapPin, Clock, CheckCircle2 } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
+import { PHONE_NUMBER, PHONE_NUMBER_RAW, CONTACT_EMAIL } from "@/lib/constants";
+
 
 const Contact = () => {
   return (
@@ -18,7 +20,7 @@ const Contact = () => {
             </p>
           </div>
         </div>
-        
+
         {/* Wave shape divider */}
         <div className="absolute bottom-0 left-0 w-full overflow-hidden">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-16">
@@ -57,10 +59,11 @@ const Contact = () => {
                     <div>
                       <h3 className="text-lg font-medium text-gray-900">Phone</h3>
                       <p className="mt-2 text-base text-gray-600">
-                        <a href="tel:+27 737112089" className="hover:text-ti-blue-600">
-                        +27 737112089
+                        <a href={`tel:${PHONE_NUMBER_RAW}`} className="hover:text-ti-blue-600">
+                          {PHONE_NUMBER}
                         </a>
                       </p>
+
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -69,9 +72,10 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                      <a href="mailto:info@trustedinstallations.co.za" className="text-gray-600 hover:text-ti-blue-600 transition-colors">
-                        info@trustedinstallations.co.za
+                      <a href={`mailto:${CONTACT_EMAIL}`} className="text-gray-600 hover:text-ti-blue-600 transition-colors">
+                        {CONTACT_EMAIL}
                       </a>
+
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -183,11 +187,12 @@ const Contact = () => {
             </div>
             <div className="relative z-10">
               <a
-                href="tel:+27834628367"
+                href={`tel:${PHONE_NUMBER_RAW}`}
                 className="inline-flex items-center px-6 py-3 bg-white text-ti-blue-900 font-medium rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors"
               >
-                <Phone className="mr-2 h-5 w-5" /> Call +27737112089
+                <Phone className="mr-2 h-5 w-5" /> Call {PHONE_NUMBER}
               </a>
+
             </div>
           </div>
         </div>

@@ -4,6 +4,8 @@ import { Tv, Radio, WifiIcon, CheckCircle2, ArrowRight, Phone, MapPin, Clock } f
 import HeroSection from "@/components/HeroSection";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
+import { PHONE_NUMBER, PHONE_NUMBER_RAW } from "@/lib/constants";
+
 
 const Index = () => {
   const services = [
@@ -72,7 +74,7 @@ const Index = () => {
               DStv Installation Services You Can Trust
             </h2>
             <p className="text-lg text-gray-600">
-              We provide expert DStv installations, repairs, and TV mounting services 
+              We provide expert DStv installations, repairs, and TV mounting services
               across major provinces of South Africa with certified technicians.
             </p>
           </div>
@@ -297,11 +299,12 @@ const Index = () => {
                 Get a Free Quote
               </Link>
               <a
-                href="tel:+27737112089"
+                href={`tel:${PHONE_NUMBER_RAW}`}
                 className="px-8 py-4 bg-ti-blue-800 text-white font-medium rounded-lg hover:bg-ti-blue-700 transition-colors border border-ti-blue-600/30 flex items-center justify-center"
               >
-                <Phone className="mr-2 h-5 w-5" /> Call +27737112089
+                <Phone className="mr-2 h-5 w-5" /> Call {PHONE_NUMBER}
               </a>
+
             </div>
           </div>
         </div>
