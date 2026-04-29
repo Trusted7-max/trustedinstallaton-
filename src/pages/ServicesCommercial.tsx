@@ -5,9 +5,9 @@ import { PHONE_NUMBER, PHONE_NUMBER_RAW } from "@/lib/constants";
 
 const ServicesCommercial = () => {
   return (
-    <main className="pt-24">
+    <main>
       {/* Header */}
-      <section className="bg-gradient-to-r from-ti-blue-900 to-ti-blue-700 text-white py-16 relative overflow-hidden">
+      <section className="bg-gradient-to-r from-ti-blue-900 to-ti-blue-700 text-white pt-32 pb-16 md:pt-40 md:pb-24 min-h-[60vh] flex flex-col justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-pattern opacity-10"></div>
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">

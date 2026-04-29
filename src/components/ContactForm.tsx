@@ -5,7 +5,11 @@ import { useForm } from "react-hook-form";
 import type { FieldValues } from "react-hook-form";
 import { PHONE_NUMBER_RAW } from "@/lib/constants";
 
-const ContactForm = () => {
+interface ContactFormProps {
+  defaultService?: string;
+}
+
+const ContactForm = ({ defaultService = "" }: ContactFormProps) => {
   const { toast } = useToast();
   const {
     register,
@@ -97,15 +101,22 @@ const ContactForm = () => {
           </label>
           <select
             id="service"
+            defaultValue={defaultService}
             {...register("service", { required: true })}
             className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-ti-blue-500 focus:border-transparent transition-colors"
           >
             <option value="">Select a service</option>
+            <option value="solar-installation">Solar Panel Installation</option>
+            <option value="solar-geyser">Solar Geyser Installation & Repair</option>
+            <option value="aircon">Air Conditioning Installation & Repair</option>
+            <option value="cctv">CCTV Installation & Repair</option>
+            <option value="wifi">WiFi Setup & Optimization</option>
             <option value="dstv-installation">DStv Installation</option>
             <option value="signal-troubleshooting">Signal Troubleshooting</option>
+            <option value="dstv-repairs">DStv Repairs</option>
+            <option value="additional-tv-points">Additional TV Points</option>
             <option value="tv-mounting">TV Mounting</option>
-            <option value="extra-view">Extra View Setup</option>
-            <option value="dish-installation">Dish Installation</option>
+            <option value="surround-sound-setup">Surround Sound Setup</option>
             <option value="commercial">Commercial Installation</option>
             <option value="other">Other</option>
           </select>

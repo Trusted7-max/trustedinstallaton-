@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Tv, Radio, WifiIcon, CheckCircle2, ArrowRight, Phone, Cable, SatelliteDish, Monitor } from "lucide-react";
+import { Tv, Radio, WifiIcon, CheckCircle2, ArrowRight, Phone, Cable, SatelliteDish, Monitor, Sun, Wind, Camera, Droplets } from "lucide-react";
 import ServiceCard from "@/components/ServiceCard";
 import { PHONE_NUMBER, PHONE_NUMBER_RAW } from "@/lib/constants";
 
@@ -11,7 +11,7 @@ const Services = () => {
       description: "Professional setup of DStv systems for homes.",
       icon: <Tv className="h-6 w-6" />,
       features: ["Decoder setup", "Dish installation", "Signal optimization"],
-      link: "/services/residential",
+      link: "/services/new-dstv-installation",
       imageUrl: "https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80",
     },
     {
@@ -19,7 +19,7 @@ const Services = () => {
       description: "Quick resolution for signal problems and picture quality issues.",
       icon: <Radio className="h-6 w-6" />,
       features: ["Signal diagnosis", "No signal fixes", "Picture quality enhancement"],
-      link: "/services/residential",
+      link: "/services/signal-troubleshooting",
       imageUrl: "https://images.unsplash.com/photo-1605648916361-9bc12ad6a569?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
     },
     {
@@ -27,8 +27,48 @@ const Services = () => {
       description: "Expert TV mounting services for optimal viewing.",
       icon: <Monitor className="h-6 w-6" />,
       features: ["Wall mount installation", "Cable management", "Perfect positioning"],
-      link: "/services/residential",
+      link: "/services/tv-mounting",
       imageUrl: "https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    },
+    {
+      title: "Solar System Experts",
+      description: "Residential solar installation and affordable solar energy options. Top-tier solar panels for home setups.",
+      icon: <Sun className="h-6 w-6" />,
+      features: ["Solar panel installation", "Solar energy systems", "Best solar panels for home 2025"],
+      link: "/services/solar-systems",
+      imageUrl: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1172&q=80",
+    },
+    {
+      title: "Aircon Services",
+      description: "Emergency AC repair and air conditioning maintenance. Same-day AC repair near me.",
+      icon: <Wind className="h-6 w-6" />,
+      features: ["Inverter split AC", "Ductless heating and cooling", "AC repair near me"],
+      link: "/services/aircon",
+      imageUrl: "https://images.unsplash.com/photo-1527689638836-411945a2b57c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1036&q=80",
+    },
+    {
+      title: "Solar Geyser Installers",
+      description: "Expert solar geyser installers and repairs. Maximize your solar power savings with our solutions.",
+      icon: <Droplets className="h-6 w-6" />,
+      features: ["Solar water heating", "Geyser repairs", "Solar power system setup"],
+      link: "/services/solar-geysers",
+      imageUrl: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    },
+    {
+      title: "CCTV Installers & Repairs",
+      description: "Secure your property with professional CCTV installers and repairs. Advanced security systems.",
+      icon: <Camera className="h-6 w-6" />,
+      features: ["Security camera setup", "System repairs", "Remote monitoring setup"],
+      link: "/services/cctv",
+      imageUrl: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1164&q=80",
+    },
+    {
+      title: "WiFi Setup & Optimization",
+      description: "Reliable internet connectivity with our professional WiFi installation and signal boosting services.",
+      icon: <WifiIcon className="h-6 w-6" />,
+      features: ["Router installation", "Signal boosting", "Network security"],
+      link: "/services/wifi",
+      imageUrl: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
     },
   ];
 
@@ -57,12 +97,36 @@ const Services = () => {
       link: "/services/commercial",
       imageUrl: "https://images.unsplash.com/photo-1596385653096-e61ddf5be28f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80",
     },
+    {
+      title: "Commercial Solar Power",
+      description: "Commercial solar panels and renewable energy systems for businesses. Affordable solar energy options.",
+      icon: <Sun className="h-6 w-6" />,
+      features: ["Commercial solar panel installation", "Solar energy incentives", "Cost of solar reduction"],
+      link: "/services/solar-systems",
+      imageUrl: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1172&q=80",
+    },
+    {
+      title: "Commercial Air Conditioning",
+      description: "Commercial AC installation cost effective solutions. Best HVAC contractor for your business needs.",
+      icon: <Wind className="h-6 w-6" />,
+      features: ["Central air installation", "Air conditioning maintenance", "Ductless heating and cooling"],
+      link: "/services/aircon",
+      imageUrl: "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    },
+    {
+      title: "Commercial CCTV & WiFi",
+      description: "Enterprise grade CCTV installers and repairs along with robust commercial WiFi networking.",
+      icon: <Camera className="h-6 w-6" />,
+      features: ["Enterprise CCTV setup", "Network optimization", "Commercial WiFi coverage"],
+      link: "/services/cctv",
+      imageUrl: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    },
   ];
 
   return (
-    <main className="pt-24">
+    <main>
       {/* Header */}
-      <section className="bg-gradient-to-r from-ti-blue-900 to-ti-blue-700 text-white py-16 relative overflow-hidden">
+      <section className="bg-gradient-to-r from-ti-blue-900 to-ti-blue-700 text-white pt-32 pb-16 md:pt-40 md:pb-24 min-h-[60vh] flex flex-col justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-pattern opacity-10"></div>
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">

@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Tv, Radio, Monitor, SatelliteDish, Wrench, Speaker, Cable, ArrowRight, Phone, CheckCircle2 } from "lucide-react";
+import { Tv, Radio, Monitor, SatelliteDish, Wrench, Speaker, Cable, ArrowRight, Phone, CheckCircle2, Sun, Wind, Camera, Droplets, WifiIcon } from "lucide-react";
 import { PHONE_NUMBER, PHONE_NUMBER_RAW } from "@/lib/constants";
 
 const ServicesResidential = () => {
   return (
-    <main className="pt-24">
+    <main>
       {/* Header */}
-      <section className="bg-gradient-to-r from-ti-blue-900 to-ti-blue-700 text-white py-16 relative overflow-hidden">
+      <section className="bg-gradient-to-r from-ti-blue-900 to-ti-blue-700 text-white pt-32 pb-16 md:pt-40 md:pb-24 min-h-[60vh] flex flex-col justify-center relative overflow-hidden">
         <div className="absolute inset-0 bg-hero-pattern opacity-10"></div>
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
@@ -36,228 +36,364 @@ const ServicesResidential = () => {
       {/* Service List Section */}
       <section className="py-20">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <h2 className="section-title mb-10">Our Residential Services</h2>
 
-            <div className="space-y-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Service 1 */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                <div className="md:col-span-1">
-                  <div className="bg-ti-blue-100 p-8 rounded-xl flex justify-center">
-                    <Tv className="h-20 w-20 text-ti-blue-600" />
-                  </div>
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col h-full">
+                <div className="bg-ti-blue-50 p-6 rounded-xl flex justify-center mb-6 w-fit mx-auto">
+                  <Tv className="h-12 w-12 text-ti-blue-600" />
                 </div>
-                <div className="md:col-span-2">
-                  <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900">
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900 text-center">
                     New DStv Installation
                   </h3>
-                  <p className="text-gray-600 mb-4">
-                    Complete setup of new DStv systems, including decoder installation, satellite dish mounting, cabling, and system configuration. We ensure optimal signal strength and picture quality.
+                  <p className="text-gray-600 mb-6 text-center">
+                    Complete setup of new DStv systems, including decoder installation, satellite dish mounting, cabling, and system configuration.
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                  <div className="space-y-3 mb-8">
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Decoder setup and configuration</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Decoder setup and configuration</span>
                     </div>
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Satellite dish installation</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Satellite dish installation</span>
                     </div>
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Cable routing and management</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Cable routing and management</span>
                     </div>
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Signal testing and optimization</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Signal testing and optimization</span>
                     </div>
                   </div>
                 </div>
+                <Link to="/services/new-dstv-installation" className="mt-auto inline-flex items-center justify-center text-ti-blue-600 font-medium hover:text-ti-blue-800 transition-colors py-2 border-t border-gray-50 pt-4">
+                  View Installation Details <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </div>
-
-              <div className="border-t border-gray-200 pt-10"></div>
 
               {/* Service 2 */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                <div className="md:col-span-1">
-                  <div className="bg-ti-blue-100 p-8 rounded-xl flex justify-center">
-                    <Radio className="h-20 w-20 text-ti-blue-600" />
-                  </div>
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col h-full">
+                <div className="bg-ti-blue-50 p-6 rounded-xl flex justify-center mb-6 w-fit mx-auto">
+                  <Radio className="h-12 w-12 text-ti-blue-600" />
                 </div>
-                <div className="md:col-span-2">
-                  <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900">
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900 text-center">
                     Signal Troubleshooting
                   </h3>
-                  <p className="text-gray-600 mb-4">
-                    Quick and effective diagnosis and resolution of DStv signal problems. We identify and fix issues affecting your viewing experience, from weak signals to complete signal loss.
+                  <p className="text-gray-600 mb-6 text-center">
+                    Quick and effective diagnosis and resolution of DStv signal problems. We identify and fix issues affecting your viewing experience.
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                  <div className="space-y-3 mb-8">
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">No signal troubleshooting</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">No signal troubleshooting</span>
                     </div>
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Picture quality issues</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Picture quality issues</span>
                     </div>
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Satellite dish realignment</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Satellite dish realignment</span>
                     </div>
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Weather-related problems</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Weather-related problems</span>
                     </div>
                   </div>
                 </div>
+                <Link to="/services/signal-troubleshooting" className="mt-auto inline-flex items-center justify-center text-ti-blue-600 font-medium hover:text-ti-blue-800 transition-colors py-2 border-t border-gray-50 pt-4">
+                  View Troubleshooting Details <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </div>
-
-              <div className="border-t border-gray-200 pt-10"></div>
 
               {/* Service 3 */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                <div className="md:col-span-1">
-                  <div className="bg-ti-blue-100 p-8 rounded-xl flex justify-center">
-                    <Wrench className="h-20 w-20 text-ti-blue-600" />
-                  </div>
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col h-full">
+                <div className="bg-ti-blue-50 p-6 rounded-xl flex justify-center mb-6 w-fit mx-auto">
+                  <Wrench className="h-12 w-12 text-ti-blue-600" />
                 </div>
-                <div className="md:col-span-2">
-                  <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900">
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900 text-center">
                     DStv Repair Services
                   </h3>
-                  <p className="text-gray-600 mb-4">
-                    Professional repair services for DStv decoders and equipment. We diagnose and fix hardware issues to restore your viewing experience with minimal downtime.
+                  <p className="text-gray-600 mb-6 text-center">
+                    Professional repair services for DStv decoders and equipment. We diagnose and fix hardware issues with minimal downtime.
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                  <div className="space-y-3 mb-8">
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Decoder troubleshooting</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Decoder troubleshooting</span>
                     </div>
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Remote control issues</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Remote control issues</span>
                     </div>
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Software updates</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Software updates</span>
                     </div>
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Component replacement</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Component replacement</span>
                     </div>
                   </div>
                 </div>
+                <Link to="/services/dstv-repair-services" className="mt-auto inline-flex items-center justify-center text-ti-blue-600 font-medium hover:text-ti-blue-800 transition-colors py-2 border-t border-gray-50 pt-4">
+                  View Repair Details <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </div>
-
-              <div className="border-t border-gray-200 pt-10"></div>
 
               {/* Service 4 */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                <div className="md:col-span-1">
-                  <div className="bg-ti-blue-100 p-8 rounded-xl flex justify-center">
-                    <Cable className="h-20 w-20 text-ti-blue-600" />
-                  </div>
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col h-full">
+                <div className="bg-ti-blue-50 p-6 rounded-xl flex justify-center mb-6 w-fit mx-auto">
+                  <Cable className="h-12 w-12 text-ti-blue-600" />
                 </div>
-                <div className="md:col-span-2">
-                  <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900">
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900 text-center">
                     Additional TV Points
                   </h3>
-                  <p className="text-gray-600 mb-4">
-                    Installation of additional TV points to connect multiple televisions to your DStv system. Enjoy your favorite content in multiple rooms without compromising quality.
+                  <p className="text-gray-600 mb-6 text-center">
+                    Installation of additional TV points to connect multiple televisions. Enjoy your favorite content in multiple rooms.
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                  <div className="space-y-3 mb-8">
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Multi-room setup</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Multi-room setup</span>
                     </div>
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Cable installation</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Cable installation</span>
                     </div>
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Signal boosting</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Signal boosting</span>
                     </div>
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Testing across all points</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Testing across all points</span>
                     </div>
                   </div>
                 </div>
+                <Link to="/services/additional-tv-points" className="mt-auto inline-flex items-center justify-center text-ti-blue-600 font-medium hover:text-ti-blue-800 transition-colors py-2 border-t border-gray-50 pt-4">
+                  View Additional Points Details <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </div>
-
-              <div className="border-t border-gray-200 pt-10"></div>
 
               {/* Service 5 */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                <div className="md:col-span-1">
-                  <div className="bg-ti-blue-100 p-8 rounded-xl flex justify-center">
-                    <Monitor className="h-20 w-20 text-ti-blue-600" />
-                  </div>
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col h-full">
+                <div className="bg-ti-blue-50 p-6 rounded-xl flex justify-center mb-6 w-fit mx-auto">
+                  <Monitor className="h-12 w-12 text-ti-blue-600" />
                 </div>
-                <div className="md:col-span-2">
-                  <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900">
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900 text-center">
                     TV Mounting
                   </h3>
-                  <p className="text-gray-600 mb-4">
-                    Professional TV mounting and wall bracket installation services. We ensure your TV is securely mounted with proper cable management for a clean, professional look.
+                  <p className="text-gray-600 mb-6 text-center">
+                    Professional TV mounting and wall bracket installation services. We ensure your TV is securely mounted with clean cable management.
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                  <div className="space-y-3 mb-8">
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Wall bracket installation</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Wall bracket installation</span>
                     </div>
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">TV mounting and setup</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">TV mounting and setup</span>
                     </div>
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Cable concealment</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Cable concealment</span>
                     </div>
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Optimal viewing position</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Optimal viewing position</span>
                     </div>
                   </div>
                 </div>
+                <Link to="/services/tv-mounting" className="mt-auto inline-flex items-center justify-center text-ti-blue-600 font-medium hover:text-ti-blue-800 transition-colors py-2 border-t border-gray-50 pt-4">
+                  View TV Mounting Details <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </div>
 
-              <div className="border-t border-gray-200 pt-10"></div>
-
               {/* Service 6 */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                <div className="md:col-span-1">
-                  <div className="bg-ti-blue-100 p-8 rounded-xl flex justify-center">
-                    <Speaker className="h-20 w-20 text-ti-blue-600" />
-                  </div>
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col h-full">
+                <div className="bg-ti-blue-50 p-6 rounded-xl flex justify-center mb-6 w-fit mx-auto">
+                  <Speaker className="h-12 w-12 text-ti-blue-600" />
                 </div>
-                <div className="md:col-span-2">
-                  <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900">
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900 text-center">
                     Surround Sound Setup
                   </h3>
-                  <p className="text-gray-600 mb-4">
-                    Complete surround sound system installation and configuration. We set up your audio equipment for the ultimate home theater experience.
+                  <p className="text-gray-600 mb-6 text-center">
+                    Complete surround sound system installation and configuration for the ultimate home theater experience.
                   </p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                  <div className="space-y-3 mb-8">
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Speaker placement</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Speaker placement</span>
                     </div>
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Receiver configuration</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Receiver configuration</span>
                     </div>
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Audio calibration</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Audio calibration</span>
                     </div>
                     <div className="flex items-center">
-                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2" />
-                      <span className="text-gray-700">Cable management</span>
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Cable management</span>
                     </div>
                   </div>
                 </div>
+                <Link to="/services/surround-sound-setup" className="mt-auto inline-flex items-center justify-center text-ti-blue-600 font-medium hover:text-ti-blue-800 transition-colors py-2 border-t border-gray-50 pt-4">
+                  View Surround Sound Details <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+
+              {/* Service 7 */}
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col h-full">
+                <div className="bg-ti-blue-50 p-6 rounded-xl flex justify-center mb-6 w-fit mx-auto">
+                  <Sun className="h-12 w-12 text-ti-blue-600" />
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900 text-center">
+                    Solar System Experts
+                  </h3>
+                  <p className="text-gray-600 mb-6 text-center">
+                    Top-tier residential solar installation. We offer affordable solar energy options for your home.
+                  </p>
+                  <div className="space-y-3 mb-8">
+                    <div className="flex items-center">
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Solar installation near me</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Solar energy systems setup</span>
+                    </div>
+                  </div>
+                </div>
+                <Link to="/services/solar-systems" className="mt-auto inline-flex items-center justify-center text-ti-blue-600 font-medium hover:text-ti-blue-800 transition-colors py-2 border-t border-gray-50 pt-4">
+                  View Solar System Details <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+
+              {/* Service 8 */}
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col h-full">
+                <div className="bg-ti-blue-50 p-6 rounded-xl flex justify-center mb-6 w-fit mx-auto">
+                  <Droplets className="h-12 w-12 text-ti-blue-600" />
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900 text-center">
+                    Solar Geyser Installers
+                  </h3>
+                  <p className="text-gray-600 mb-6 text-center">
+                    Expert solar geyser installers for residential use. We handle solar water heating setups and repairs.
+                  </p>
+                  <div className="space-y-3 mb-8">
+                    <div className="flex items-center">
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Geyser installation</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Maintenance & repairs</span>
+                    </div>
+                  </div>
+                </div>
+                <Link to="/services/solar-geysers" className="mt-auto inline-flex items-center justify-center text-ti-blue-600 font-medium hover:text-ti-blue-800 transition-colors py-2 border-t border-gray-50 pt-4">
+                  View Solar Geyser Details <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+
+              {/* Service 9 */}
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col h-full">
+                <div className="bg-ti-blue-50 p-6 rounded-xl flex justify-center mb-6 w-fit mx-auto">
+                  <Wind className="h-12 w-12 text-ti-blue-600" />
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900 text-center">
+                    Aircon Services
+                  </h3>
+                  <p className="text-gray-600 mb-6 text-center">
+                    Emergency AC repair and maintenance. We offer inverter split AC and ductless cooling setups.
+                  </p>
+                  <div className="space-y-3 mb-8">
+                    <div className="flex items-center">
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Same-day AC repair</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Air conditioning service</span>
+                    </div>
+                  </div>
+                </div>
+                <Link to="/services/aircon" className="mt-auto inline-flex items-center justify-center text-ti-blue-600 font-medium hover:text-ti-blue-800 transition-colors py-2 border-t border-gray-50 pt-4">
+                  View Aircon Details <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+
+              {/* Service 10 */}
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col h-full">
+                <div className="bg-ti-blue-50 p-6 rounded-xl flex justify-center mb-6 w-fit mx-auto">
+                  <Camera className="h-12 w-12 text-ti-blue-600" />
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900 text-center">
+                    CCTV Installers & Repairs
+                  </h3>
+                  <p className="text-gray-600 mb-6 text-center">
+                    Protect your property with advanced security cameras. We ensure your system is always functioning.
+                  </p>
+                  <div className="space-y-3 mb-8">
+                    <div className="flex items-center">
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Camera installation</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Security system repairs</span>
+                    </div>
+                  </div>
+                </div>
+                <Link to="/services/cctv" className="mt-auto inline-flex items-center justify-center text-ti-blue-600 font-medium hover:text-ti-blue-800 transition-colors py-2 border-t border-gray-50 pt-4">
+                  View CCTV Details <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+
+              {/* Service 11 */}
+              <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col h-full">
+                <div className="bg-ti-blue-50 p-6 rounded-xl flex justify-center mb-6 w-fit mx-auto">
+                  <WifiIcon className="h-12 w-12 text-ti-blue-600" />
+                </div>
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-display font-semibold mb-4 text-gray-900 text-center">
+                    WiFi Setup & Optimization
+                  </h3>
+                  <p className="text-gray-600 mb-6 text-center">
+                    Fast and stable internet with professional WiFi installations and dead zone elimination.
+                  </p>
+                  <div className="space-y-3 mb-8">
+                    <div className="flex items-center">
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Router configuration</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CheckCircle2 className="h-5 w-5 text-ti-blue-500 mr-2 flex-shrink-0" />
+                      <span className="text-gray-700 text-sm">Network optimization</span>
+                    </div>
+                  </div>
+                </div>
+                <Link to="/services/wifi" className="mt-auto inline-flex items-center justify-center text-ti-blue-600 font-medium hover:text-ti-blue-800 transition-colors py-2 border-t border-gray-50 pt-4">
+                  View WiFi Details <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
               </div>
             </div>
           </div>

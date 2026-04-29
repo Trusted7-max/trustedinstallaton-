@@ -28,6 +28,8 @@ const Navbar = () => {
     setIsServicesOpen(false);
   }, [location]);
 
+  const isSolid = isScrolled || isMenuOpen;
+
   const navItems = [
     { name: "Home", path: "/" },
     {
@@ -45,16 +47,16 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${isScrolled
-          ? "bg-white/80 backdrop-blur-md shadow-md py-3"
-          : "bg-transparent py-5"
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${isSolid
+          ? "bg-white/95 backdrop-blur-md shadow-md py-3"
+          : "bg-transparent py-4"
         }`}
     >
       <div className="container-custom">
         <div className="flex items-center justify-between">
           <Link
             to="/"
-            className="flex items-center space-x-2 text-ti-blue-900 font-display font-bold text-2xl"
+            className={`flex items-center space-x-2 font-display font-bold text-2xl ${isSolid ? "text-ti-blue-900" : "text-white"}`}
           >
             <div className="w-10 h-10 rounded-full bg-ti-blue-600 flex items-center justify-center text-white">
               TI
@@ -72,8 +74,8 @@ const Navbar = () => {
                       onClick={() => setIsServicesOpen(!isServicesOpen)}
                       className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${location.pathname === item.path ||
                           location.pathname.startsWith(`${item.path}/`)
-                          ? "text-ti-blue-600"
-                          : "text-gray-700 hover:text-ti-blue-600 hover:bg-gray-100"
+                          ? (isSolid ? "text-ti-blue-600" : "text-white")
+                          : (isSolid ? "text-gray-700 hover:text-ti-blue-600 hover:bg-gray-100" : "text-gray-200 hover:text-white hover:bg-white/10")
                         }`}
                     >
                       {item.name}
@@ -103,8 +105,8 @@ const Navbar = () => {
                   <Link
                     to={item.path}
                     className={`px-3 py-2 text-sm font-medium rounded-md transition-colors ${location.pathname === item.path
-                        ? "text-ti-blue-600"
-                        : "text-gray-700 hover:text-ti-blue-600 hover:bg-gray-100"
+                        ? (isSolid ? "text-ti-blue-600" : "text-white")
+                        : (isSolid ? "text-gray-700 hover:text-ti-blue-600 hover:bg-gray-100" : "text-gray-200 hover:text-white hover:bg-white/10")
                       }`}
                   >
                     {item.name}
@@ -117,8 +119,8 @@ const Navbar = () => {
           {/* Phone number display - desktop */}
           <div className="hidden md:flex items-center">
             <div className="text-sm">
-              <p className="text-gray-600">Call:</p>
-              <a href={`tel:${PHONE_NUMBER_RAW}`} className="text-gray-900 font-medium">
+              <p className={isSolid ? "text-gray-600" : "text-gray-200"}>Call:</p>
+              <a href={`tel:${PHONE_NUMBER_RAW}`} className={`font-medium ${isSolid ? "text-gray-900" : "text-white"}`}>
                 {PHONE_NUMBER}
               </a>
             </div>
@@ -127,7 +129,7 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-gray-700"
+            className={`md:hidden ${isSolid ? "text-gray-700" : "text-white"}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (

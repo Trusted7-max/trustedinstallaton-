@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Tv, Radio, WifiIcon, CheckCircle2, ArrowRight, Phone, MapPin, Clock } from "lucide-react";
+import { Tv, Radio, WifiIcon, CheckCircle2, ArrowRight, Phone, MapPin, Clock, Sun, Wind, Camera, Droplets } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
@@ -14,7 +14,7 @@ const Index = () => {
       description: "Professional setup of DStv systems for crisp, clear viewing experience.",
       icon: <Tv className="h-6 w-6" />,
       features: ["Decoder setup", "Dish installation", "Signal optimization"],
-      link: "/services/residential",
+      link: "/services/new-dstv-installation",
       imageUrl: "https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1050&q=80",
     },
     {
@@ -22,7 +22,7 @@ const Index = () => {
       description: "Quick resolution for signal problems and picture quality issues.",
       icon: <Radio className="h-6 w-6" />,
       features: ["Signal diagnosis", "No signal fixes", "Picture quality enhancement"],
-      link: "/services/residential",
+      link: "/services/signal-troubleshooting",
       imageUrl: "https://images.unsplash.com/photo-1605648916361-9bc12ad6a569?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
     },
     {
@@ -30,8 +30,48 @@ const Index = () => {
       description: "Expert mounting and configuration for optimal entertainment.",
       icon: <WifiIcon className="h-6 w-6" />,
       features: ["TV mounting", "Surround sound setup", "Cable management"],
-      link: "/services/residential",
+      link: "/services/tv-mounting",
       imageUrl: "https://images.unsplash.com/photo-1558888401-3cc1de77652d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
+    },
+    {
+      title: "Solar System Experts",
+      description: "Residential solar installation and affordable solar energy options. Top-tier solar panels for home setups.",
+      icon: <Sun className="h-6 w-6" />,
+      features: ["Solar panel installation", "Solar energy systems", "Best solar panels for home 2025"],
+      link: "/services/solar-systems",
+      imageUrl: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=1172&q=80",
+    },
+    {
+      title: "Aircon Services",
+      description: "Emergency AC repair and air conditioning service near me. Reliable ductless heating and cooling.",
+      icon: <Wind className="h-6 w-6" />,
+      features: ["Inverter split AC", "Same-day AC repair", "AC repair near me"],
+      link: "/services/aircon",
+      imageUrl: "https://images.unsplash.com/photo-1527689638836-411945a2b57c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1036&q=80",
+    },
+    {
+      title: "Solar Geyser Installers",
+      description: "Expert solar geyser installers and repairs. Maximize your solar power savings with our solutions.",
+      icon: <Droplets className="h-6 w-6" />,
+      features: ["Solar water heating", "Geyser repairs", "Solar power system setup"],
+      link: "/services/solar-geysers",
+      imageUrl: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
+    },
+    {
+      title: "CCTV Installers & Repairs",
+      description: "Secure your property with professional CCTV installers and repairs. Advanced security systems.",
+      icon: <Camera className="h-6 w-6" />,
+      features: ["Security camera setup", "System repairs", "Remote monitoring"],
+      link: "/services/cctv",
+      imageUrl: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1164&q=80",
+    },
+    {
+      title: "WiFi Setup & Optimization",
+      description: "Reliable internet connectivity with our professional WiFi installation and signal boosting services.",
+      icon: <WifiIcon className="h-6 w-6" />,
+      features: ["Router installation", "Signal boosting", "Network security"],
+      link: "/services/wifi",
+      imageUrl: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80",
     },
   ];
 
@@ -227,6 +267,10 @@ const Index = () => {
               "Satellite Dish Alignment",
               "LNB Replacements",
               "TV Mounting & Bracket Installations",
+              "Residential solar installation & repairs",
+              "Same-day AC repair near me",
+              "CCTV system installation & monitoring",
+              "Home WiFi and networking setup",
             ].map((service, index) => (
               <div key={index} className="bg-ti-blue-900/50 backdrop-blur-sm p-4 rounded-lg border border-ti-blue-800/50 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="flex items-center">
