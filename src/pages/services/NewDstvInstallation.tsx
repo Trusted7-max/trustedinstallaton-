@@ -1,4 +1,4 @@
-import React, from "react";
+import React from "react";
 import { CheckCircle2, Shield, Wrench, Clock, Tv } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 
